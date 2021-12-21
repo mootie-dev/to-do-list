@@ -34,14 +34,14 @@ form button {
 }
 
 form button {
-  color: #fb5858;
+  color: crimson;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #bf3d3d;
+  background: crimson;
   color: white;
 }
 
@@ -65,6 +65,7 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
+  transition: all 1s ease;
 }
 
 .todo li {
@@ -97,4 +98,49 @@ form button:hover {
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: black;
+  width: 11rem;
+  cursor: pointer;
+  padding: 1.1rem;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: white;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: crimson;
+  top: 0;
+  right: 0;
+  padding: 1.2rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover:after {
+  background: white;
+  color: crimson;
 }
